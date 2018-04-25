@@ -21,4 +21,4 @@ done
 echo '文件行数:' ${word_line}
 echo '单词个数:' ${word_sum}
 echo '文件字节数:' `du -b ${word_file} | awk {'print $1'}`
-echo '出现最频繁的单词:' `cat stat.txt | sort -nr | uniq -c | sort -r | head -5`
+echo '出现最频繁的单词:' `cat stat.txt | sort -nr | uniq -c | sort -r | head -5 && rm -fr stat.txt`
